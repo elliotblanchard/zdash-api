@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express')
+const router = express.Router()
 
 /* GET raw transaction listing. */
 router.get('/', function(req, res, next) {
-  res.send('getrawtransaction');
+  res.send('getrawtransaction')
 });
 
-module.exports = router;
+module.exports = router
