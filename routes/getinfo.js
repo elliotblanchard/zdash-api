@@ -7,7 +7,16 @@ let rpcOptions = require('../modules/rpcOptions.js')
 router.get('/', function(req, res, next) {
   //rpcCall("getinfo",[])
   rpcOptions["body"] = JSON.stringify( {"jsonrpc": "1.0", "id": "curltest", "method": "getinfo", "params": [] })
-  res.send(rpcOptions)
+
+  request(rpcOptions, (error, response, body) => {
+    if (error) {
+        res.send(`An error has occurred: ${error}`)
+    } else {
+        res.send(body)
+    }
+  });
+
+  //res.send(rpcOptions)
 });
 
 module.exports = router
