@@ -1,11 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const rpcCall = require('../modules/rpcCall.js')
+let rpcOptions = require('../modules/rpcOptions.js')
 
 /* GET network info listing. */
 router.get('/', function(req, res, next) {
-  rpcCall("getinfo",[])
-  res.send('getinfo')
+  //rpcCall("getinfo",[])
+  rpcOptions["body"] = JSON.stringify( {"jsonrpc": "1.0", "id": "curltest", "method": "getinfo", "params": [] })
+  res.send(rpcOptions)
 });
 
 module.exports = router

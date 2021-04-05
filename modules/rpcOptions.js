@@ -1,3 +1,34 @@
+module.exports = {
+    url: "http://192.168.1.158:8232",
+    method: "post",
+    headers:
+    { 
+    "content-type": "text/plain"
+    },
+    auth: {
+        user: "samwellhouston",
+        pass: "silversandyblocks"
+    }
+}
+
+/* 
+module.exports = {
+    url: "http://192.168.1.158:8232",
+    method: "post",
+    headers:
+    { 
+    "content-type": "text/plain"
+    },
+    auth: {
+        user: "samwellhouston",
+        pass: "silversandyblocks"
+    },
+    body: JSON.stringify( {"jsonrpc": "1.0", "id": "curltest", "method": method, "params": params })
+}
+
+
+
+
 module.exports = function (method,params) { 
     const request = require('request')
 
@@ -29,3 +60,4 @@ module.exports = function (method,params) {
     
 };
 
+*/
