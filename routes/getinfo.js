@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const request = require('request')
 let rpcOptions = require('../modules/rpcOptions.js')
 
 /* GET network info listing. */
