@@ -22,6 +22,10 @@ module.exports = function (method,params) {
             console.log(body)
         }
     });
+
+    // Consider instead making this module only contain the OPTIONS object (with the method and params empty) instead of a function - 
+    // that can then be imported into each route, the method and params updated, and the request made there, 
+    // thus solving the problem of passing the results of the request back
     
 };
 
