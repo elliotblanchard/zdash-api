@@ -5,7 +5,6 @@ let rpcOptions = require('../modules/rpcOptions.js')
 
 /* GET network info listing. */
 router.get('/', function(req, res, next) {
-  //rpcCall("getinfo",[])
   rpcOptions["body"] = JSON.stringify( {"jsonrpc": "1.0", "id": "curltest", "method": "getinfo", "params": [] })
 
   request(rpcOptions, (error, response, body) => {
@@ -14,10 +13,8 @@ router.get('/', function(req, res, next) {
     } else {
         res.send(body)
     }
-  });
-
-  //res.send(rpcOptions)
-});
+  })
+})
 
 module.exports = router
 
