@@ -5,7 +5,7 @@ let rpcOptions = require('../modules/rpcOptions.js')
 
 /* GET network info listing. */
 router.get('/', function(req, res, next) {
-  rpcOptions["body"] = JSON.stringify( {"jsonrpc": "1.0", "id": "curltest", "method": "getinfo", "params": [] })
+  rpcOptions["body"] = JSON.stringify( {"jsonrpc": "1.0", "id": "api_request", "method": "getinfo", "params": [] })
 
   request(rpcOptions, (error, response, body) => {
     if (error) {
