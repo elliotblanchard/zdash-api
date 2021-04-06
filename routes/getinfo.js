@@ -11,7 +11,8 @@ router.get('/', function(req, res, next) {
     if (error) {
         res.send(`An error has occurred: ${error}`)
     } else {
-        res.send(body)
+        const jsonResponse = JSON.parse(body) 
+        res.json(jsonResponse)
     }
   })
 })
