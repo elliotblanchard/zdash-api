@@ -1,5 +1,6 @@
 module.exports = {
-    url: "http://192.168.1.158:8232",
+    // url: "http://192.168.1.158:8232",
+    url: "http://localhost:8232",
     method: "post",
     headers:
     { 
